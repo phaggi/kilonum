@@ -1,7 +1,3 @@
-import sys
-from pathlib import Path
-
-
 class KiloNum:
     def __init__(self, value, round_val=None):
         if any([isinstance(value, float), isinstance(value, int)]):
@@ -22,9 +18,8 @@ class KiloNum:
     def __repr__(self):
         return f'{myvalue.kilo},\n{myvalue.mega},\n{myvalue.giga}'
 
-
-myvalue = KiloNum(34500101112)
-print(myvalue)
-print(myvalue.giga)
-my_root = Path(sys.argv[0]).parent
-print(my_root)
+if __name__ == '__main__':
+    myvalue = KiloNum(34500101112)
+    print(myvalue)
+    print()
+    print(myvalue.giga)
